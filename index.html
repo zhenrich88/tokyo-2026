@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026 柴柴黑黑東京散步帖</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2a44;--mut:#5d6a80;--line:#d3dde6;--map:#f7fafc;--fuji:#cdd8ea;--warn:#fff4e0;--warnink:#7a4a00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a2b;--card:#1b2540;--ink:#eaf0fb;--mut:#a4b1c9;--line:#2b3858;--map:#17203a;--fuji:#2e3a5e;--warn:#3a2d12;--warnink:#f3d9a0}}
+:root[data-theme="dark"]{--bg:#121a2b;--card:#1b2540;--ink:#eaf0fb;--mut:#a4b1c9;--line:#2b3858;--map:#17203a;--fuji:#2e3a5e;--warn:#3a2d12;--warnink:#f3d9a0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header svg{width:92px;height:68px;flex:none}
+h1{font-size:clamp(22px,5vw,32px);line-height:1.25;margin:0}
+.sub{color:var(--mut);margin:4px 0 0}
+.stay{margin:14px 0 0;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--mut);font-size:13.5px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+nav button{font:inherit;border:2px solid var(--line);background:var(--card);color:var(--ink);padding:6px 14px;border-radius:999px;cursor:pointer}
+nav button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+nav button:focus-visible{outline:3px solid #2d7ff9;outline-offset:2px}
+.maps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.maps{grid-template-columns:1fr}}
+.map{background:var(--map);border:1px solid var(--line);border-radius:14px;padding:8px}
+.map h2{font-size:14px;margin:2px 6px 0;color:var(--mut);font-weight:600}
+.map svg{width:100%;height:auto;display:block}
+.map text{font-size:11.5px;fill:var(--ink);paint-order:stroke;stroke:var(--map);stroke-width:3px}
+.cards{display:grid;gap:14px;margin-top:18px}
+.day{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:12px;padding:14px 16px}
+.day h3{margin:0;font-size:18px}
+.day h3 span{color:var(--c);margin-right:8px}
+.day .h{color:var(--mut);font-size:13px;margin:2px 0 8px}
+.say{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
+.say p{margin:0;display:flex;gap:6px;align-items:center;background:var(--bg);padding:4px 10px 4px 4px;border-radius:999px;font-size:13.5px}
+.say svg{width:26px;height:26px;flex:none}
+ul{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:54px 1fr;gap:8px;padding:5px 0;border-top:1px dashed var(--line)}
+li b{color:var(--mut);font-weight:600;font-size:13px}
+li small{display:block;color:var(--mut);font-size:12.5px}
+.warn{margin:10px 0 0;padding:8px 12px;background:var(--warn);color:var(--warnink);border-radius:8px;font-size:13px}
+body[data-skin="shiba"]{--bg:#fff6e8;--card:#fffdf8;--ink:#4a3426;--mut:#8a6e58;--line:#ecd5b8;--map:#fff9ee;--fuji:#e6d6c4;--warn:#ffe9c7;--warnink:#7a4a00}
+body[data-skin="poodle"]{--bg:#161722;--card:#222435;--ink:#f1eefc;--mut:#b6b2cc;--line:#3a3c58;--map:#1b1c2b;--fuji:#34365a;--warn:#33291a;--warnink:#f1d9a3}
+body{background-image:radial-gradient(var(--line) 1.2px,transparent 1.4px);background-size:22px 22px}
+h1,.day h3{font-family:"Hannotate TC","Yuppy TC","Kaiti TC","BiauKai","PingFang TC",cursive}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 0}
+.bar button{font:inherit;font-size:13.5px;border:2px dashed var(--ink);background:var(--card);color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer}
+.bar button:focus-visible{outline:3px solid #2d7ff9;outline-offset:2px}
+.clock{font-size:13.5px;padding:5px 12px;background:var(--card);border:2px solid var(--line);border-radius:999px}
+.clock b{font-variant-numeric:tabular-nums}
+.day{position:relative;border:2px dashed var(--line);border-left:6px solid var(--c)}
+.day:nth-child(odd){transform:rotate(-.35deg)}.day:nth-child(even){transform:rotate(.35deg)}
+.day::before{content:"";position:absolute;top:-9px;right:22px;width:68px;height:16px;background:var(--c);opacity:.55;transform:rotate(3deg);border-radius:2px}
+.map{border:2px dashed var(--line)}
+.map a{cursor:pointer}
+.pin{text-decoration:none;margin-left:4px}
+.note{margin:12px 2px 0;color:var(--mut);font-size:12.5px}
+@media(prefers-reduced-motion:reduce){.day{transform:none!important}}
+</style>
+</head>
+<body data-skin="shiba">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="sh" viewBox="0 0 40 40"><path d="M5 5l10 5-7 11z M35 5l-10 5 7 11z" fill="#d9792b"/><ellipse cx="20" cy="23" rx="15" ry="13" fill="#f0a04b"/><ellipse cx="20" cy="29" rx="9" ry="7" fill="#fff3e0"/><circle cx="14" cy="21" r="2" fill="#222"/><circle cx="26" cy="21" r="2" fill="#222"/><ellipse cx="20" cy="26" rx="2.6" ry="2" fill="#222"/><path d="M17 30q3 3 6 0" stroke="#222" fill="none" stroke-width="1.2"/></symbol>
+<symbol id="pd" viewBox="0 0 40 40"><circle cx="20" cy="8" r="7" fill="#2a2a33"/><circle cx="12" cy="10" r="5" fill="#2a2a33"/><circle cx="28" cy="10" r="5" fill="#2a2a33"/><ellipse cx="6" cy="25" rx="5" ry="10" fill="#1e1e26"/><ellipse cx="34" cy="25" rx="5" ry="10" fill="#1e1e26"/><ellipse cx="20" cy="23" rx="11" ry="13" fill="#34343f"/><circle cx="15" cy="21" r="2.2" fill="#fff"/><circle cx="25" cy="21" r="2.2" fill="#fff"/><circle cx="15" cy="21" r="1.1" fill="#111"/><circle cx="25" cy="21" r="1.1" fill="#111"/><ellipse cx="20" cy="27" rx="3" ry="2.2" fill="#e8a0b0"/></symbol>
+</svg>
+<main>
+<header>
+<svg viewBox="0 0 92 68" role="img" aria-label="柴犬與黑貴賓"><use href="#sh" x="0" y="14" width="52" height="52"/><use href="#pd" x="40" y="4" width="52" height="52"/></svg>
+<div>
+<h1>2026 柴柴黑黑東京散步帖</h1>
+<p class="sub">11/25（三）– 11/30（一）・柴柴與黑黑陪你走完每一天 🐾</p>
+</div>
+</header>
+<div class="bar"><button type="button" id="skin">🖤 切換黑黑夜色版</button><span class="clock">🕒 日本 <b id="jp">--:--</b>　台灣 <b id="tw">--:--</b></span><button type="button" id="play">⏸ 暫停</button><button type="button" id="sp" aria-label="播放速度">×1</button></div>
+<p class="stay">住宿：11/25 上野 Tabist HOTEL UENO 39 ／ 11/26–27 河口湖 Hotel Camelot ／ 11/28 山中湖 富士山中湖森普萊斯酒店 ／ 11/29 上野 KOKO HOTEL Ueno Station</p>
+<nav id="tabs" aria-label="選擇哪一天"></nav>
+<section class="maps">
+<div class="map"><h2>東京</h2><svg id="tk" viewBox="0 0 440 340" role="img" aria-label="東京路線示意圖"></svg></div>
+<div class="map"><h2>富士五湖</h2><svg id="fj" viewBox="0 0 440 440" role="img" aria-label="富士五湖路線示意圖"></svg></div>
+</section>
+<p class="note">✦ 地圖為柴柴黑黑手帳示意插畫，比例非實際距離；遠距離路段旁標示約略公里數。點地名或 📍 會開 Google 地圖搜尋，出發前請再確認位置。</p>
+<section class="cards" id="cards"></section>
+</main>
+<script>
+var C=['#e4572e','#d98e04','#2e9e6b','#2d7ff9','#8e5bd9','#d6336c'];
+var N={tk:{NRT:[385,35,'成田機場','e'],ASA:[345,100,'淺草・晴空塔','e'],UEN:[280,165,'上野'],YAN:[230,125,'谷根千','e'],SUG:[190,80,'巢鴨','e'],KIC:[70,170,'吉祥寺'],SHJ:[140,215,'新宿'],GOT:[80,255,'豪德寺'],SAN:[110,300,'三軒茶屋'],GAI:[200,265,'神宮外苑'],ROP:[235,300,'六本木（備案）'],TSU:[300,245,'築地'],TOY:[360,300,'新豐洲']},
+fj:{SJK:[385,30,'新宿','e'],KGC:[215,105,'河口湖'],NIK:[140,55,'新倉山','e'],FYS:[190,165,'富士吉田','e'],OSH:[265,185,'忍野八海'],YMK:[345,120,'山中湖','e'],NAR:[120,135,'鳴沢','e'],ASG:[95,255,'朝霧高原・金山テラス'],KNY:[110,305,'馬飼野牧場'],OBU:[150,350,'大淵笹場'],FJM:[200,390,'世遺中心・AD Line'],FKW:[95,415,'富士川SA'],GTB:[325,300,'御殿場Outlets','e']}};
+var R=[{tk:['NRT','UEN','KIC','ASA'],alt:['ASA','ROP']},
+{fj:['SJK','KGC','OSH','KGC']},
+{fj:['KGC','OSH','NIK','FYS','YMK','KGC']},
+{fj:['KGC','YMK','NAR','ASG','KNY','OBU','FJM','FKW','GTB','YMK']},
+{tk:['SHJ','GOT','SAN','GAI','SHJ','UEN','SUG','TOY'],fj:['YMK','KGC','SJK']},
+{tk:['UEN','TSU','ASA','YAN','UEN','NRT']}];
+var D=[
+{d:'11/25 週三',t:'抵達東京，上野起手',h:'Tabist HOTEL UENO 39',say:['柴柴：「落地先衝阿美橫町！」','黑黑：「我要去貓咪城堡巡邏。」'],
+s:[['06:10','桃園T1 → 成田（虎航 IT200）','10:35 抵達，桃園 03:00 起報到'],['11:16','Skyliner 成田 → 京成上野','約41分 ¥2,580；省錢選 Access 特快 ¥1,280'],['午後','上野寄放行李、阿美橫町、午餐肉の大山','阿美橫町 20:00 打烊'],['','吉祥寺','貓迷城堡 Petit Mura、貓咖啡 Temari no Oshiro、井之頭恩賜公園賞楓'],['17:00','淺草雷門點燈 → 晴空塔夜景','雷門點燈 17–21 時'],['備案','六本木之丘櫸坂 SNOW＆BLUE、天橋拍東京鐵塔','']],
+w:'東京中城（Midtown）聖誕燈飾 11/26 才開始，今天去只能看六本木之丘。'},
+{d:'11/26 週四',t:'進河口湖，租車開跑',h:'Hotel Camelot（連住兩晚，21:00 前報到）',say:['柴柴：「富士山布丁我先試吃！」','黑黑：「纜車排隊我來守位子。」'],
+s:[['07:30','上野 → 新宿 → 河口湖 富士回遊','JR ¥253；特急 07:30–09:28 ¥4,130（11/1 開賣）；備案高速巴士 ¥2,200'],['','遊客中心、Fujisan Pudding、LAWSON 富士山景','布丁 11–18 時'],['','河口湖租車（Toyota）','¥37,950，已預定'],['','河口湖纜車','¥1,200，約 1.5 小時'],['午餐','ほうとう 不動','11–20 時'],['','音樂森林美術館、楓葉迴廊、長崎公園（逆富士）、大石公園','紅葉祭至 11/29'],['16:30','楓葉迴廊點燈、不動茶屋東戀路店','點燈至 21:00；忍野八海 24 小時開放']],
+w:'Lake Bake Cafe 週二到週四公休，11/26（四）不開。'},
+{d:'11/27 週五',t:'富士吉田與山中湖',h:'Hotel Camelot（連住）',say:['柴柴：「早起拍忍野八海。」','黑黑：「天鵝讓我追一下。」'],
+s:[['07:30','退房，忍野八海晨景',''],['08:00','新倉富士淺間神社','停留 1.5–2 小時；御朱印 9–16 時'],['10:10','富士吉田本町商店街、西裏通、金鳥居','必拍富士山街景'],['12:40','午餐 山崎家うどん','11:00–13:35'],['','點心 Fujisan Pudding、河口淺間神社','河馬巴士 ¥2,800，末班 15:15'],['','山中湖：旭日丘、平野之濱、森のアルム、長池親水公園、THE PARK、白鳥浜','Aruma 到 14:00、THE PARK 到 15:30'],['備案','大一観光園、御坂農園、甲州夢小路、笛吹水果樂園','']],
+w:'旭日丘楓葉季為 10/31–11/15，現在已過盛期。'},
+{d:'11/28 週六',t:'自駕繞富士山南麓',h:'富士山中湖森普萊斯酒店（含早餐，20:38 入住）',say:['柴柴：「牧場霜淇淋一定要！」','黑黑：「鞦韆我也要盪。」'],
+s:[['07:32','長池親水公園、山中湖白鳥浜（餵天鵝）','07:56–08:15'],['08:45','鳴沢 活き活き広場（公園鞦韆）',''],['09:00','朝霧高原道之驛 → 金山テラス早午餐','10:00–12:00，14:00 前要到'],['12:00','馬飼野牧場','¥1,200；週三休'],['14:00','大淵笹場（茶園＋富士山）',''],['15:00','富士山世界遺產中心、AD Line','15:00–16:15'],['16:40','富士川SA 星巴克 → 御殿場 Premium Outlets','Outlets 18:30–20:00'],['晚餐','Nagomi 壽喜燒或仙台牛舌 たん平','壽喜燒 18:00–21:30；牛舌 11–20 時']],
+w:'御殿場離山中湖約 38 分，入住時間已排到 20:38。'},
+{d:'11/29 週日',t:'回東京，招財貓巡禮',h:'KOKO HOTEL Ueno Station',say:['柴柴：「3D 貓比我大隻！」','黑黑：「我們去找招財貓。」'],
+s:[['早上','退房，還車，河口湖2號搭高速巴士到新宿','2–3 小時，¥2,200 現場購票'],['','新宿東口廣場 3D 貓',''],['','豪德寺 → 世田谷線宮之坂','小田急 ¥199、世田谷線 ¥160；寺務所 08–15 時'],['午餐','三軒茶屋「海街丼」',''],['','明治神宮外苑銀杏林','¥490'],['','新宿取行李 → 上野 KOKO HOTEL','JR ¥260'],['傍晚','巢鴨地藏通商店街，或阿美橫町','10–17 時，5–6 點打烊'],['晚上','新豐洲 東京聖誕市集','假日票 ¥1,500（KKday，11/20 開賣）']],
+w:'巴士到新宿後，豪德寺寺務所 15:00 就關，行程偏滿，可視進度刪景點。'},
+{d:'11/30 週一',t:'築地、淺草、谷根千，返台',h:'退房寄行李（KOKO HOTEL）',say:['柴柴：「築地先吃一輪。」','黑黑：「淺草寺御守我顧。」'],
+s:[['早上','京成上野 → 築地場外市場','大江戶線 ¥280；09:00–14:00'],['','淺草寺、仲見世、今戶神社','寺 06:30–17:00；今戶招財貓御守'],['','谷根千（日暮里）、夕陽階梯','¥340；10:00–18:00'],['下午','回飯店取行李 → 京成上野','走 5 分鐘'],['14:00','Skyliner 京成上野 → 成田','41 分 ¥2,580；機場報到 15:00'],['18:25','成田 → 桃園','21:50 抵達']],
+w:'11/30 是週一，谷根千很多店家公休。'}];
+var spd=1,playing=true,sel=0,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function pth(g,ids){return 'M'+ids.map(function(i){return N[g][i][0]+' '+N[g][i][1]}).join(' L')}
+function draw(g){
+var h=(g=='tk'?'<text x="432" y="72" text-anchor="end" style="font-size:11px;fill:var(--mut)">成田↔上野 約65 km</text>':''),days=sel?[sel-1]:[0,1,2,3,4,5],on={};
+if(g=='fj')h+='<path d="M120 330L215 205L310 330Z" fill="var(--fuji)"/><path d="M193 233L215 205L237 233L226 227L215 238L204 227Z" fill="var(--bg)"/><text x="215" y="260" text-anchor="middle" style="font-size:11px">富士山</text><text x="300" y="62" text-anchor="middle" style="font-size:11px;fill:var(--mut)">新宿↔河口湖 約100 km</text>';
+days.forEach(function(d){var r=R[d][g],a=R[d].alt;
+if(r){r.forEach(function(i){on[i]=1});h+='<path d="'+pth(g,r)+'" fill="none" stroke="'+C[d]+'" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity="'+(sel?1:.8)+'"/>'}
+if(a&&g=='tk'){a.forEach(function(i){on[i]=1});h+='<path d="'+pth(g,a)+'" fill="none" stroke="'+C[d]+'" stroke-width="3" stroke-dasharray="5 5"/>'}});
+Object.keys(N[g]).forEach(function(k){var n=N[g][k],e=n[3]=='e',o=(!sel||on[k])?1:.3;
+h+='<a href="'+mq(n[2])+'" target="_blank" rel="noopener"><g opacity="'+o+'"><circle cx="'+n[0]+'" cy="'+n[1]+'" r="4.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/><text x="'+(n[0]+(e?-9:9))+'" y="'+(n[1]+4)+'" text-anchor="'+(e?'end':'start')+'">'+n[2]+'</text></g></a>'});
+if(sel&&R[sel-1][g]&&!reduce){var p=pth(g,R[sel-1][g]);
+h+='<g><animateMotion dur="'+(9/spd)+'s" repeatCount="indefinite" path="'+p+'"/><use href="#sh" x="-12" y="-12" width="24" height="24"/></g><g><animateMotion dur="'+(9/spd)+'s" begin="'+(0.9/spd)+'s" repeatCount="indefinite" path="'+p+'"/><use href="#pd" x="-12" y="-12" width="24" height="24"/></g>'}
+else if(sel&&R[sel-1][g]){var f=N[g][R[sel-1][g][0]];h+='<use href="#sh" x="'+(f[0]-26)+'" y="'+(f[1]-26)+'" width="24" height="24"/><use href="#pd" x="'+(f[0]+2)+'" y="'+(f[1]-26)+'" width="24" height="24"/>'}
+if(sel&&!R[sel-1][g])h+='<text x="220" y="'+(g=='tk'?170:220)+'" text-anchor="middle" style="fill:var(--mut)">今天不在這個區域</text>';
+document.getElementById(g).innerHTML=h}
+function cards(){var h='';D.forEach(function(x,i){if(sel&&sel-1!=i)return;
+h+='<article class="day" style="--c:'+C[i]+'"><h3><span>第'+(i+1)+'天</span>'+x.t+'</h3><p class="h">'+x.d+'　住：'+x.h+'</p><div class="say"><p><svg viewBox="0 0 40 40"><use href="#sh"/></svg>'+x.say[0]+'</p><p><svg viewBox="0 0 40 40"><use href="#pd"/></svg>'+x.say[1]+'</p></div><ul>';
+x.s.forEach(function(s){h+='<li><b>'+s[0]+'</b><span>'+s[1]+'<a class="pin" href="'+mq(s[1])+'" target="_blank" rel="noopener" aria-label="在 Google 地圖搜尋">📍</a>'+(s[2]?'<small>'+s[2]+'</small>':'')+'</span></li>'});
+h+='</ul><p class="warn">提醒：'+x.w+'</p></article>'});
+document.getElementById('cards').innerHTML=h}
+function tabs(){var h='';['全部'].concat(D.map(function(x,i){return '第'+(i+1)+'天'})).forEach(function(t,i){h+='<button type="button" data-i="'+i+'" aria-pressed="'+(i==sel)+'">'+t+'</button>'});
+var n=document.getElementById('tabs');n.innerHTML=h;
+n.querySelectorAll('button').forEach(function(b){b.onclick=function(){sel=+b.dataset.i;go()}})}
+function applyPause(){if(!playing)document.querySelectorAll('.map svg').forEach(function(s){s.pauseAnimations()})}
+function go(){tabs();draw('tk');draw('fj');cards();applyPause()}
+function mq(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q+' 日本')}
+var skin=document.getElementById('skin'),pl=document.getElementById('play'),spb=document.getElementById('sp');
+skin.onclick=function(){var p=document.body.dataset.skin=='poodle';document.body.dataset.skin=p?'shiba':'poodle';skin.textContent=p?'🖤 切換黑黑夜色版':'🧡 切換柴柴暖橘版'};
+pl.onclick=function(){playing=!playing;pl.textContent=playing?'⏸ 暫停':'▶ 播放';document.querySelectorAll('.map svg').forEach(function(s){playing?s.unpauseAnimations():s.pauseAnimations()})};
+spb.onclick=function(){spd=spd==4?1:spd*2;spb.textContent='×'+spd;draw('tk');draw('fj');applyPause()};
+function tick(){var f=function(z){return new Date().toLocaleTimeString('zh-TW',{timeZone:z,hour12:false,hour:'2-digit',minute:'2-digit'})};document.getElementById('jp').textContent=f('Asia/Tokyo');document.getElementById('tw').textContent=f('Asia/Taipei')}
+tick();setInterval(tick,15000);
+if(reduce){pl.hidden=true;spb.hidden=true}
+go();
+</script>
+</body>
+</html>
